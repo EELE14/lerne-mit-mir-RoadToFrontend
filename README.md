@@ -1,4 +1,4 @@
-## Woche 1 — React+TSX Fundamentals Playground
+# Woche 1 — React+TSX Fundamentals Playground
 
 **Slug: w01-playground**
 - __Ziel:__ Sichere TSX-Grundlagen, Props/State/Events, Tailwind-Basics.
