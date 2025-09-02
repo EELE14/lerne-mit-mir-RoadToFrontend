@@ -17,7 +17,7 @@
 - Projekt mit Vite + TSX aufsetzen (siehe oben).
 - Komponentenstruktur anlegen: src/components/, src/pages/, src/lib/.
 - AppShell.tsx erstellen:
-- Enthält '<header>', '<main>', '<footer>'.
+- Enthält `<header>`, `<main>`, `<footer>`.
 - Mit Tailwind einfache Layout-Struktur (max-w-3xl, mx-auto, p-4).
 - Lint/Format einrichten (ESLint + Prettier).
 - Source: Vite React TS Doku, Tailwind Setup.
