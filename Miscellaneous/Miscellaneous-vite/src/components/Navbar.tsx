@@ -1,46 +1,49 @@
 import { useState } from "react";
-import { Menu, X, Github, Info, Mail, Home } from "lucide-react";
+import { Menu, X, Github, Info, Mail, Home, Moon, Sun } from "lucide-react";
+import NormalButton from "./NormalButton";
+import HamburgerButton from "./HamburgerButton";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleDark = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle("dark");
+  };
   return (
     <nav className="w-full bg-black/30 backdrop-blur-sm text-white px-4 md:px-6 py-3 mb-6">
       <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
         <h1 className="text-black text-2xl font-semibold">Todo App</h1>
-
+        <img src="/vite.svg" alt="Logo" className="h-8 md:hidden" />
+        <button
+          onClick={toggleDark}
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          aria-pressed={isDark}
+          title={isDark ? "Light mode" : "Dark mode"}
+          className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 shadow-sm hover:shadow-md backdrop-blur transition-transform transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/30"
+        >
+          <span className="text-lg">{isDark ? <Sun /> : <Moon />}</span>
+          <span className="hidden sm:inline text-sm font-medium">
+            {isDark ? "Light" : "Dark"}
+          </span>
+        </button>
         {/* Desktop actions */}
         <div className="hidden md:flex items-center gap-3">
-          <button
-            aria-label="Home"
-            className="flex items-center gap-2 bg-white/10 text-black px-3 py-1.5 rounded-md hover:bg-white/50 transition-colors border-1 border-black"
-          >
-            <Home size={16} />
-            <span>Home</span>
-          </button>
-          <button
-            aria-label="Contact"
-            className="flex items-center gap-2 bg-white/10 text-black px-3 py-1.5 rounded-md hover:bg-white/50 transition-colors border-1 border-black"
-          >
-            <Mail size={16} />
-            <span>Contact</span>
-          </button>
-          <button
-            aria-label="GitHub"
-            className="flex items-center gap-2 bg-white/10 text-black px-3 py-1.5 rounded-md hover:bg-white/50 transition-colors border-1 border-black"
-          >
-            <Github size={16} />
-            <span>GitHub</span>
-          </button>
-          <button
-            aria-label="Info"
-            className="flex items-center gap-2 bg-white/10 text-black px-3 py-1.5 rounded-md hover:bg-white/50 transition-colors border-1 border-black"
-          >
-            <Info size={16} />
-            <span>Info</span>
-          </button>
+          <NormalButton text="Home" icon={<Home size={16} />} linkto="/" />
+          <NormalButton
+            text="GitHub"
+            icon={<Github size={16} />}
+            linkto="https://github.com/EELE14/"
+          />
+          <NormalButton
+            text="Contact"
+            icon={<Mail size={16} />}
+            linkto="/contact"
+          />
+          <NormalButton text="Info" icon={<Info size={16} />} linkto="/info" />
         </div>
-
         {/* Mobile hamburger */}
         <div className="md:hidden">
           <button
@@ -61,18 +64,22 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden max-w-5xl mx-auto mt-2 px-2">
           <div className="flex flex-col gap-2 bg-black/40 backdrop-blur-sm rounded-md p-2 shadow-lg">
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-left">
-              <Home size={16} /> <span>Home</span>
-            </button>
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-left">
-              <Mail size={16} /> <span>Contact</span>
-            </button>
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-left">
-              <Github size={16} /> <span>GitHub</span>
-            </button>
-            <button className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-left">
-              <Info size={16} /> <span>Info</span>
-            </button>
+            <HamburgerButton text="Home" icon={<Home size={16} />} linkto="/" />
+            <HamburgerButton
+              text="Contact"
+              icon={<Mail size={16} />}
+              linkto="/contact"
+            />
+            <HamburgerButton
+              text="GitHub"
+              icon={<Github size={16} />}
+              linkto="https://github.com/EELE14/"
+            />
+            <HamburgerButton
+              text="Info"
+              icon={<Info size={16} />}
+              linkto="/info"
+            />
           </div>
         </div>
       )}
