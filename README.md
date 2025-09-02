@@ -1,19 +1,19 @@
-Woche 1 — React+TSX Fundamentals Playground
+## Woche 1 — React+TSX Fundamentals Playground
 
-Slug: w01-playground
-Ziel: Sichere TSX-Grundlagen, Props/State/Events, Tailwind-Basics.
-Kernfeatures: Kleine, isolierte Komponenten (Button, Card, Counter, List).
-Akzeptanzkriterien: Keine TypeScript-Fehler, CI-freies Linting, 1 Styleguide-Seite.
-Deliverables: README mit Screens, STYLEGUIDE.md (Buttons, Cards, Typo).
+**Slug: w01-playground**
+__Ziel:__ Sichere TSX-Grundlagen, Props/State/Events, Tailwind-Basics.
+__Kernfeatures:__ Kleine, isolierte Komponenten (Button, Card, Counter, List).
+__Akzeptanzkriterien:__ Keine TypeScript-Fehler, CI-freies Linting, 1 Styleguide-Seite.
+__Deliverables:__ README mit Screens, STYLEGUIDE.md (Buttons, Cards, Typo).
 
-Tagesplan
-	•	Tag 1: Scaffold, Tailwind, TS strict, Projektstruktur, Basislayout (<AppShell/>).
-	•	Tag 2: Komponenten 1: <Button/>, <Badge/>, <Card/> (Props sauber typisieren).
-	•	Tag 3: State/Events: <Counter/>, <Toggle/> (controlled), Tastaturtest.
-	•	Tag 4: Listen/Keys: <TagList/> mit Add/Remove; leere Zustände.
-	•	Tag 5: Hooks light: useLocalStorage<T>() (nur Demo), <ThemeToggle/>.
-	•	Tag 6: Styleguide-Seite: Alle Komponenten dokumentieren.
-	•	Tag 7: Review/Refactor, README + Screens, Lint/Types = 0 Fehler.
+**__Tagesplan__**
+- __Tag 1:__ Scaffold, Tailwind, TS strict, Projektstruktur, Basislayout (<AppShell/>).
+- __Tag 2:__ Komponenten 1: <Button/>, <Badge/>, <Card/> (Props sauber typisieren).
+- __Tag 3:__ State/Events: <Counter/>, <Toggle/> (controlled), Tastaturtest.
+- __Tag 4:__ Listen/Keys: <TagList/> mit Add/Remove; leere Zustände.
+- __Tag 5:__ Hooks light: useLocalStorage<T>() (nur Demo), <ThemeToggle/>.
+- __Tag 6:__ Styleguide-Seite: Alle Komponenten dokumentieren.
+- __Tag 7:__ Review/Refactor, README + Screens, Lint/Types = 0 Fehler.
 
 ⸻
 
