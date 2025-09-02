@@ -1,10 +1,10 @@
 ## Woche 1 — React+TSX Fundamentals Playground
 
 **Slug: w01-playground**
-__Ziel:__ Sichere TSX-Grundlagen, Props/State/Events, Tailwind-Basics.
-__Kernfeatures:__ Kleine, isolierte Komponenten (Button, Card, Counter, List).
-__Akzeptanzkriterien:__ Keine TypeScript-Fehler, CI-freies Linting, 1 Styleguide-Seite.
-__Deliverables:__ README mit Screens, STYLEGUIDE.md (Buttons, Cards, Typo).
+- __Ziel:__ Sichere TSX-Grundlagen, Props/State/Events, Tailwind-Basics.
+- __Kernfeatures:__ Kleine, isolierte Komponenten (Button, Card, Counter, List).
+- __Akzeptanzkriterien:__ Keine TypeScript-Fehler, CI-freies Linting, 1 Styleguide-Seite.
+- __Deliverables:__ README mit Screens, STYLEGUIDE.md (Buttons, Cards, Typo).
 
 **__Tagesplan__**
 - __Tag 1:__ Scaffold, Tailwind, TS strict, Projektstruktur, Basislayout (<AppShell/>).
